@@ -339,7 +339,7 @@ while($rads2=mysqli_fetch_row($reads2)){
                     $rpre_img = mysqli_fetch_assoc($repre_img);
                         if($rpre_img['post_id']!=$_GET['topic_id']){
                   ?>
-                    <img src="data:image/<?php echo end(explode('-', $rpost[6])); ?>;base64,<?php echo curl($rpost[6]);?>"src="<?=$rpost[6];?>" alt="<?=$rpost[3];?>" width="220" height="350" border="0" title="<?=$rpost[3];?>" />
+                    <img src="data:image/<?php echo end(explode('-', $rpost[6])); ?>;base64,<?php echo curl($rpost[6]);?>" alt="<?=$rpost[3];?>" width="220" height="350" border="0" title="<?=$rpost[3];?>" />
                   <? }else{ ?>
                     <img src="//<?=$titler[3];?>/post-img/<?=$rpost[6];?>" alt="<?=$rpost[3];?>" width="220" height="350" border="0" title="<?=$rpost[3];?>" />
                   <? } ?>
@@ -1078,7 +1078,7 @@ if(($typevdo==".mp4")||($typevdo==".MP4")){
                     $rpre_img = mysqli_fetch_assoc($repre_img);
                         if($rpre_img['post_id']!=$_GET['topic_id']){
                   ?>
-                    <img src="<?=$rpost[6];?>" alt="<?=$rpost[3];?>" width="220" height="350" border="0" title="<?=$rpost[3];?>" />
+                    <img src="data:image/<?php echo end(explode('-', $rpost[6])); ?>;base64,<?php echo curl($rpost[6]);?>" alt="<?=$rpost[3];?>" width="220" height="350" border="0" title="<?=$rpost[3];?>" />
                   <? }else{ ?>
                     <img src="//<?=$titler[3];?>/post-img/<?=$rpost[6];?>" alt="<?=$rpost[3];?>" width="163" height="250" border="0" title="<?=$rpost[3];?>" />
                   <? } ?>
@@ -1444,7 +1444,7 @@ if(($typevdo==".mp4")||($typevdo==".MP4")){
                     $rpre_img = mysqli_fetch_assoc($repre_img);
                         if($rpre_img['post_id']!=$_GET['topic_id']){
                   ?>
-                    <img src="<?=$rpost[6];?>" alt="<?=$rpost[3];?>" width="220" height="350" border="0" title="<?=$rpost[3];?>" />
+                    <img src="data:image/<?php echo end(explode('-', $rpost[6])); ?>;base64,<?php echo curl($rpost[6]);?>" alt="<?=$rpost[3];?>" width="220" height="350" border="0" title="<?=$rpost[3];?>" />
                   <? }else{ ?>
                     <img src="//<?=$titler[3];?>/post-img/<?=$rpost[6];?>" alt="<?=$rpost[3];?>" width="163" height="250" border="0" title="<?=$rpost[3];?>" />
                   <? } ?>
