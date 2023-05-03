@@ -6,31 +6,35 @@ include "function/function.php";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="//www.w3.org/1999/xhtml">
-<head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161006242-1">
-</script>
-<script>
- window.dataLayer = window.dataLayer || [];
- function gtag(){dataLayer.push(arguments);}
- gtag('js', new Date());
 
- gtag('config', 'UA-161006242-1');
-</script>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>รายการหนังทั้งหมด | <?=$titler[1];?></title>
-<META NAME="keywords" CONTENT="<?=$rcate[6];?>"> 
-<META NAME="description" CONTENT="<?=$titler[1];?> <?=$rcate[5];?>">
-<meta name="robots"  content="index,follow">
-<link rel="stylesheet" href="//<?=$titler[3];?>/css/styles.css" type="text/css" />
-<script type="text/javascript" src="//w.sharethis.com/button/buttons.js"></script>
-<? if($rbl[1]==1){ ?>
-<!--Slide-->
-<link rel="stylesheet" href="//<?=$titler[3];?>/css/coin-slider-styles.css" type="text/css" />
-<script type="text/javascript" src="//<?=$titler[3];?>/js/jquery-1.4.2.min.js"></script>
-<script type="text/javascript" src="//<?=$titler[3];?>/js/coin-slider.js"></script>
-<? } ?>
-<?php   
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161006242-1">
+  </script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+
+  gtag('config', 'UA-161006242-1');
+  </script>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>รายการหนังทั้งหมด | <?=$titler[1];?></title>
+  <META NAME="keywords" CONTENT="<?=$rcate[6];?>">
+  <META NAME="description" CONTENT="<?=$titler[1];?> <?=$rcate[5];?>">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="//<?=$titler[3];?>/css/styles.css" type="text/css" />
+  <script type="text/javascript" src="//w.sharethis.com/button/buttons.js"></script>
+  <? if($rbl[1]==1){ ?>
+  <!--Slide-->
+  <link rel="stylesheet" href="//<?=$titler[3];?>/css/coin-slider-styles.css" type="text/css" />
+  <script type="text/javascript" src="//<?=$titler[3];?>/js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="//<?=$titler[3];?>/js/coin-slider.js"></script>
+  <? } ?>
+  <?php   
 // สร้างฟังก์ชั่น สำหรับแสดงการแบ่งหน้า   
 function page_navigator($before_p,$plus_p,$total,$total_p,$chk_page){   
     global $urlquery_str;
@@ -87,121 +91,143 @@ function page_navigator($before_p,$plus_p,$total,$total_p,$chk_page){
     }
 }   
 ?>
-<style type="text/css"> 
-<!--
-	.paginate {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: .7em;
-	}
-	a.paginate {
-	border: 1px solid #FFFFFF;
-	background-color: #333333;
-	padding: 2px 6px 2px 6px;
-	text-decoration: none;
-	color: #FFFFFF;
-	}
-	h2 {
-		font-size: 12pt;
-		color: #003366;
-		}
-		
-		 h2 {
-		line-height: 1.2em;
-		letter-spacing:-1px;
-		margin: 0;
-		padding: 0;
-		text-align: left;
-		}
-	a.paginate:hover {
-	border: 1px solid #FFFFFF;
-	background-color: #FFFFFF;
-	color: #000000;
-	text-decoration: underline;
-	}
-	a.current {
-	border: 1px solid #FFFFFF;
-	font: bold .7em Arial,Helvetica,sans-serif;
-	padding: 2px 6px 2px 6px;
-	cursor: default;
-	background:#FFFFFF;
-	color: #000000;
-	text-decoration: none;
-	}
-	span.inactive {
-	border: 1px solid #999;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: .7em;
-	padding: 2px 6px 2px 6px;
-	color: #999;
-	cursor: default;
-	}
--->
-</style>
+  <style type="text/css">
+  <!--
+  .paginate {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7em;
+  }
+
+  a.paginate {
+    border: 1px solid #FFFFFF;
+    background-color: #333333;
+    padding: 2px 6px 2px 6px;
+    text-decoration: none;
+    color: #FFFFFF;
+  }
+
+  h2 {
+    font-size: 12pt;
+    color: #003366;
+  }
+
+  h2 {
+    line-height: 1.2em;
+    letter-spacing: -1px;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  a.paginate:hover {
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  a.current {
+    border: 1px solid #FFFFFF;
+    font: bold .7em Arial, Helvetica, sans-serif;
+    padding: 2px 6px 2px 6px;
+    cursor: default;
+    background: #FFFFFF;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  span.inactive {
+    border: 1px solid #999;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .7em;
+    padding: 2px 6px 2px 6px;
+    color: #999;
+    cursor: default;
+  }
+  -->
+  </style>
 </head>
 
 <body>
-<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-  <tr>
-    <td><? include "header.php"; ?></td>
-  </tr>
-  <tr>
-    <td id="bg-main"style=" background-color: #<?=$bgr[1];?>;
+  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td>
+        <? include "header.php"; ?>
+      </td>
+    </tr>
+    <tr>
+      <td id="bg-main" style=" background-color: #<?=$bgr[1];?>;
   <? if($bgr[2]!=""){ ?>background-image: url(//<?=$titler[3];?>/bg-img/<?=$bgr[2];?>);
   background-repeat: <?=$bgr[3];?>;<? }if($bgr[4]==1){ ?> 
   background-attachment:fixed;
   <? } ?>">
-     <table width="1200" border="0" align="center" cellpadding="2" cellspacing="0"bgcolor="#000000"> 
-      <tr>
-        <td width="10%" align="center" valign="top"><? include "menu_a.php"; ?></td>
-        <td width="80%" align="center" valign="top">
-		
-		<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-            <tr>
-              <td align="center">
-<?
+        <table width="1200" border="0" align="center" cellpadding="2" cellspacing="0" bgcolor="#000000">
+          <tr>
+            <td width="10%" align="center" valign="top">
+              <? include "menu_a.php"; ?>
+            </td>
+            <td width="80%" align="center" valign="top">
+
+              <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td align="center">
+                    <?
 $sads2="SELECT * FROM `ads_a2` ORDER BY id ASC";
 $reads2=mysqli_query($con_db, $sads2) or die("Error $sads2");
 while($rads2=mysqli_fetch_row($reads2)){
 ?>
-<table width="728" border="0" align="center" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td align="center" valign="middle"><? 
+                    <table width="728" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td align="center" valign="middle">
+                          <? 
 						  if($rads2[1]==1){ 
 						  $ads2=stripslashes($rads2[3]); 
 						  echo $ads2;
 						  }else if($rads2[1]==2){ 
 						  ?>
-                        <a href="<?=$rads2[7];?>" title="<?=$rads2[8];?>" target="_blank">
-                        <? if($rads2[2]==1){  ?>
-                        <img src="//<?=$titler[3];?>/ads-img/<?=$rads2[9];?>" alt="<?=$rads2[8];?>" width="728" border="0" title="<?=$rads2[8];?>" />
-                        <? }else if($rads2[2]==2){ ?>
-                        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="728" border="0">
-                          <param name="movie" value="//<?=$titler[3];?>/ads-img/<?=$rads1[9];?>" />
-                          <param name="quality" value="high" />
-                          <embed src="//<?=$titler[3];?>/ads-img/<?=$rads2[9];?>" width="728" quality="high" pluginspage="//www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash"></embed>
-                        </object>
-                        <? }} ?>
-                      </a></td>
-                  </tr>
-                </table>
-                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td height="5"></td>
-                  </tr>
-                </table>
-                <? } ?></td>
-            </tr>
-            <tr>
-              <td align="center"><table width="730" border="0" align="center" cellpadding="0" cellspacing="0">
-                  <tr>
-                    <td  id="rcorners4" align="center" id="title-movie" style="color: #FFFFFF; font-size: 24px;background-color: #<? echo $theme_bgcolor;?>;"><h1 style="color: #FFFFFF; font-size: 26px; margin-top: 2px;height: 23px;font-weight: 400;"><?=$rcate[1];?>รายการหนังแนะนำ</h1></td>
-                  </tr>
-                  <tr>
-                    <td align="center">
-					 <table width="730" border="0" align="center" cellpadding="0" cellspacing="0">
+                          <a href="<?=$rads2[7];?>" title="<?=$rads2[8];?>" target="_blank">
+                            <? if($rads2[2]==1){  ?>
+                            <img src="//<?=$titler[3];?>/ads-img/<?=$rads2[9];?>" alt="<?=$rads2[8];?>" width="728"
+                              border="0" title="<?=$rads2[8];?>" />
+                            <? }else if($rads2[2]==2){ ?>
+                            <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+                              codebase="//download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0"
+                              width="728" border="0">
+                              <param name="movie" value="//<?=$titler[3];?>/ads-img/<?=$rads1[9];?>" />
+                              <param name="quality" value="high" />
+                              <embed src="//<?=$titler[3];?>/ads-img/<?=$rads2[9];?>" width="728" quality="high"
+                                pluginspage="//www.macromedia.com/go/getflashplayer"
+                                type="application/x-shockwave-flash"></embed>
+                            </object>
+                            <? }} ?>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td height="5"></td>
+                      </tr>
+                    </table>
+                    <? } ?>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <table width="730" border="0" align="center" cellpadding="0" cellspacing="0">
+                      <tr>
+                        <td id="rcorners4" align="center" id="title-movie"
+                          style="color: #FFFFFF; font-size: 24px;background-color: #<? echo $theme_bgcolor;?>;">
+                          <h1 style="color: #FFFFFF; font-size: 26px; margin-top: 2px;height: 23px;font-weight: 400;">
+                            <?=$rcate[1];?>รายการหนังแนะนำ</h1>
+                        </td>
+                      </tr>
                       <tr>
                         <td align="center">
-<?	
+                          <table width="730" border="0" align="center" cellpadding="0" cellspacing="0">
+                            <tr>
+                              <td align="center">
+                                <?	
 $q="SELECT id, title, img, view, movie, projection, imdb  FROM `post` where sticky=1 ";
 $q.=" ORDER BY rand() DESC ";
 $qr=mysqli_query($con_db, $q);
@@ -233,77 +259,97 @@ $before_p=($chk_page*$e_page)+1;
 ?>
 
 
-<div class="box" onmouseover="this.style.backgroundColor='#7e7e7e';" onmouseout="this.style.backgroundColor='#333333';">
- <div class="ribbon"><span class="movie-<?=$objResult[4];?>"><?=$objResult[4];?></span></div>
- <? if(!$objResult[6] == ''){?>
-  <div class="ribbon2"><span  style="font-size: 12px;"><img src="//<?=$titler[3];?>/img/star.png" width="30%"> <?=$objResult[6];?></span></div>
-<?}?>
+                                <div class="box" onmouseover="this.style.backgroundColor='#7e7e7e';"
+                                  onmouseout="this.style.backgroundColor='#333333';">
+                                  <div class="ribbon"><span class="movie-<?=$objResult[4];?>"><?=$objResult[4];?></span>
+                                  </div>
+                                  <? if(!$objResult[6] == ''){?>
+                                  <div class="ribbon2"><span style="font-size: 12px;"><img
+                                        src="//<?=$titler[3];?>/img/star.png" width="30%"> <?=$objResult[6];?></span>
+                                  </div>
+                                  <?}?>
 
 
-                          <table width="170" border="0" align="center" cellpadding="0" cellspacing="0">
-                            <tr>
-                              <td align="center"> <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                                  <tr>
-                                    <td height="5"></td>
-                                  </tr>
-                                </table>
-                                  <table width="163" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  <table width="170" border="0" align="center" cellpadding="0" cellspacing="0">
                                     <tr>
-                                      <td align="center"><table width="163" border="0" align="center" cellpadding="0" cellspacing="0">
-                                        <tr>
-                                          <td align="center"><a href="//<?=$titler[3];?>/post-<?=$objResult[0];?>/<?=$posturl;?>.html" title="<?=$objResult[1];?>">
+                                      <td align="center">
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                          <tr>
+                                            <td height="5"></td>
+                                          </tr>
+                                        </table>
+                                        <table width="163" border="0" align="center" cellpadding="0" cellspacing="0">
+                                          <tr>
+                                            <td align="center">
+                                              <table width="163" border="0" align="center" cellpadding="0"
+                                                cellspacing="0">
+                                                <tr>
+                                                  <td align="center"><a
+                                                      href="//<?=$titler[3];?>/post-<?=$objResult[0];?>/<?=$posturl;?>.html"
+                                                      title="<?=$objResult[1];?>">
 
-                  <?
+                                                      <?
                     $spre_imgs="SELECT * FROM `post_img` where post_id='".$objResult[0]."'";
                     $repre_img=mysqli_query($con_db, $spre_imgs) or die("ERROR $spre");
                     $rpre_img = mysqli_fetch_assoc($repre_img);
                       if($rpre_img['post_id']!=$objResult[0]){
                   ?>
-                    <img src="<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
-                  <? }else{ ?>
-                    <img src="//<?=$titler[3];?>/post-img/<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
-                  <? } ?>                                            
+                                                      <img src="data:image/<?php echo end(explode('-', $objResult[2])); ?>;base64,<?php echo curl($objResult[2]);?>" alt="<?=$objResult[1];?>"
+                                                        width="163" height="250" border="0"
+                                                        title="<?=$objResult[1];?>" />
+                                                      <? }else{ ?>
+                                                      <img src="//<?=$titler[3];?>/post-img/<?=$objResult[2];?>"
+                                                        alt="<?=$objResult[1];?>" width="163" height="250" border="0"
+                                                        title="<?=$objResult[1];?>" />
+                                                      <? } ?>
 
 
-                                          </a></td>
-                                        </tr>
-                                      </table></td>
+                                                    </a></td>
+                                                </tr>
+                                              </table>
+                                            </td>
+                                          </tr>
+
+
+                                          <tr>
+                                          <tr width="100%" bgcolor="#2e2e2e">
+                                            <td width="100%" height="25" id="font-main" align="center"
+                                              style="font-size: 12px; color: #ffc582;">
+                                              <? if($objResult[4]=='SUB'){ echo "Sound Track ".$objResult[4];}else{ echo "พากย์ไทย ".$objResult[4];} echo " ".$objResult[5];?>
+                                            </td>
+                                          </tr>
+                                          <td align="center">
+                                            <table bgcolor="#1c1c1c" width="163" height="55" border="0" align="center"
+                                              cellpadding="0" cellspacing="3">
+                                              <tr>
+                                                <td height="55" align="center" id="font-main" class="container p-3"
+                                                  style="font-size: 15px; ">
+                                                  <a href="//<?=$titler[3];?>/post-<?=$objResult[0];?>/<?=$posturl;?>.html"
+                                                    title="<?=$objResult[1];?>">
+                                                    <!-- <?=$objResult[1];?> -->
+                                                    <?echo iconv_substr($objResult[1], 0 , 35, 'UTF-8').'..';?>
+                                                  </a>
+                                                </td>
+                                              </tr>
+                                            </table>
+                                          </td>
                                     </tr>
-                                   
-
-                                <tr>
-                                      <tr width="100%"  bgcolor="#2e2e2e">
-                                          <td width="100%" height="25" id="font-main" align="center" style="font-size: 12px; color: #ffc582;" > <? if($objResult[4]=='SUB'){ echo "Sound Track ".$objResult[4];}else{ echo "พากย์ไทย ".$objResult[4];} echo " ".$objResult[5];?>
-                                          </td>
-                                      </tr>
-                                  <td align="center">
-                                      <table bgcolor="#1c1c1c" width="163" height="55" border="0" align="center" cellpadding="0" cellspacing="3">
-                                      <tr>
-                                          <td height="55" align="center" id="font-main"class="container p-3" style="font-size: 15px; ">
-                                            <a href="//<?=$titler[3];?>/post-<?=$objResult[0];?>/<?=$posturl;?>.html" title="<?=$objResult[1];?>">
-                                            <!-- <?=$objResult[1];?> -->
-                                              <?echo iconv_substr($objResult[1], 0 , 35, 'UTF-8').'..';?>
-                                            </a>
-                                          </td>
-                                      </tr>
-                                    </table>
-                                  </td>
-                                </tr>
 
 
                                   </table>
-                                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
                                     <tr>
                                       <td height="5"></td>
                                     </tr>
-                                </table></td>
+                                  </table>
+                              </td>
                             </tr>
                           </table>
 
-</div>
+                          </div>
 
 
-<?
+                          <?
 			echo"</td>";
 			if(($intRows)%4==0)
 			{
@@ -311,39 +357,48 @@ $before_p=($chk_page*$e_page)+1;
 			}
 		}
 		echo"</tr></table>";
-?>						</td>
+?>
+                        </td>
                       </tr>
                       <tr>
                         <td height="30" align="center" valign="middle">
-<?php if($total>0){ ?>
-<div class="browse_page">
- <?php   
+                          <?php if($total>0){ ?>
+                          <div class="browse_page">
+                            <?php   
  // เรียกใช้งานฟังก์ชั่น สำหรับแสดงการแบ่งหน้า   
   page_navigator($before_p,$plus_p,$total,$total_p,$chk_page);    
-  ?> 
-</div>
-<?php } ?>
-						</td>
+  ?>
+                          </div>
+                          <?php } ?>
+                        </td>
                       </tr>
-                     </table>
+                    </table>
 
 
 
 
-					</td>
-                  </tr>
-              </table></td>
-            </tr>
-        </table></td>
-        <td width="10%" align="center" valign="top"><? include "menu.php"; ?></td>
-      </tr>
-        <tr width="10%">
-    <td height="60" align="center" id="footer"><? include "footer.php"; ?></td>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+      <td width="10%" align="center" valign="top">
+        <? include "menu.php"; ?>
+      </td>
+    </tr>
+    <tr width="10%">
+      <td height="60" align="center" id="footer">
+        <? include "footer.php"; ?>
+      </td>
+    </tr>
+
+  </table>
+  </td>
   </tr>
 
-    </table></td>
-  </tr>
-
-</table>
+  </table>
 </body>
+
 </html>

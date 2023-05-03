@@ -17,12 +17,13 @@ function rewrite($url)
 function curl($url){
 
   $curl = curl_init();
+  $ref=explode("/",$url);
   curl_setopt($curl, CURLOPT_URL, $url);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
   curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
   curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-    'Referer: https://www.movie788.com'
+    'Referer: https://'.$ref[2]
   ));
 
   $response = curl_exec($curl);
