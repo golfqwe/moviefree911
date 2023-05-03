@@ -1,0 +1,162 @@
+  @import url("https://fonts.googleapis.com/css?family=Prompt:300");
+body {
+   font-family: 'Prompt', sans-serif;
+   font-size: 15px; 
+} .menu_div ul
+{
+    padding:8px;
+    margin:0px;
+    
+    font-size:15px;
+    color:#FFF;
+    list-style:none;
+    text-indent:5px;
+    background:#333333;
+}
+.menu_div ul li
+{
+    background:#333333;
+    line-height:28px;
+    border-bottom:1px solid #000;
+}
+.menu_div ul li a
+{
+    text-decoration:none;
+    color:#FFF;
+    display:block;
+}
+.menu_div ul li a:hover
+{
+    background:#222222;
+}
+.menu_div ul li#active
+{
+    background:#3ea5ea;
+}
+#font-main {
+  
+   font-size:15px;
+}
+.movie-corner {
+    width: 75px;
+    position: absolute;
+    text-align: center;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #f0f0f0;
+    top: 10px;
+    right: -19px;
+    left: auto;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    font-weight: 600;
+    box-shadow: 0 0 0px rgba(0, 0, 0, .3);
+    text-shadow: 1px 1px 1px #222
+}
+.movie-HD {
+    background: #dc0603
+}
+.movie-SD {
+    background: #ff9900
+}
+.movie-ZM {
+    background: #0e9f00
+}
+.movie-SUB {
+    background: #0033ff
+}
+
+
+.browse_page{
+   width: fit-content;
+    clear:both;
+    margin-left:12px;
+    height:35px;
+    margin-top:20px;
+    display:block;
+    padding: 1%;
+    
+}
+.browse_page a,.browse_page a:hover{   /*2..>>*/
+    display:block;
+    width:28px;  
+    height:23px;
+    font-size:18px;
+    float:left;
+    margin-right:8px;
+    border:1px solid #CCCCCC;
+    background-color:#F4F4F4;
+    color:#333333;
+    text-align:center;
+    line-height:18px;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius: 4px;
+
+
+}
+.browse_page a:hover{
+    border:1px solid #B81212;
+    background-color:#B81212;
+    color:#FFFFFF;
+    border-radius: 4px;
+}
+.browse_page a.selectPage{  /*1*/
+    display:block;
+    width:28px;  
+    height:23px;
+    font-size:18px;
+    float:left;
+    margin-right:8px;
+    border:1px solid #B81212;
+    background-color:#B81212;
+    color:#FFFFFF;
+    text-align:center;
+    line-height:18px;
+    font-weight:bold;
+    border-radius: 4px;
+    
+}
+.browse_page a.SpaceC{   /*...*/
+    display:block;
+    width:50px;
+    height:25px;
+    font-size:18px;
+    float:left;
+    margin-right:8px;
+    border:0px dotted #B81212;
+    font-size:18px;
+    background-color:#FFFFFF;
+    color:#333333;
+    text-align:center;
+    line-height:18px;
+    font-weight:bold;
+    border-radius: 4px;
+}
+.browse_page a.naviPN{   /*next*/
+    width:80px;  
+    height:23px;
+    font-size:18px;
+    display:block;
+    float:left;
+    border:1px solid #B81212;
+    background-color:#B81212;
+    color:#FFFFFF;
+    text-align:center;
+    line-height:18px;
+    font-weight:bold;   
+    border-radius: 4px;
+}
+.browse_page a.naviPN:hover{  /*next*/
+    width:80px; 
+    height:23px; 
+    font-size:18px;
+    display:block;
+    float:left;
+    border:1px solid #B81212;
+    background-color:#B81212;
+    color:#FFFFFF;
+    text-align:center;
+    line-height:18px;
+    font-weight:bold;   
+}

@@ -1,0 +1,4 @@
+1 แก้ไข .htaccess
+ เพิ่ม RewriteRule ^view-([0-9]*)/(.*).html$ view_blog.php?id=$1
+2. เพิ่มเมนู รายการบล็อก blog-detail.php
+3. เพิ่มเมนูใน ADMIN list-admin-blog.php

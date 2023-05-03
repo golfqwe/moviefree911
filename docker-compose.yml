@@ -1,0 +1,32 @@
+version: '3.7'
+services:
+  mysql:
+    container_name: mysqlDb
+    image: mysql/mysql-server:5.7.37
+    environment:
+     MYSQL_DATABASE: movief13_movie911
+     MYSQL_USER: movief13_movie911
+     MYSQL_PASSWORD: 0618678291_Sky
+    restart: always
+    volumes:
+     - ./movief13_movie911.sql:/docker-entrypoint-initdb.d/init.sql
+
+  legacy-php:
+    depends_on:
+     - mysql
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+     - .:/var/www/html
+    ports:
+     - "8002:80"
+
+  adminer:
+    image: adminer:latest
+    container_name: adminer
+    restart: always
+    ports:
+      - 8088:8080
+    depends_on:
+      - mysql

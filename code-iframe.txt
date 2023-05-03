@@ -1,0 +1,27 @@
+แบบ 1 โฆษณา
+
+<iframe src="https://allplayer.tk/vst2.php?player=111111 &amp;s1=6&amp;video1=https://www.222222.com/ads.mp4
+&amp;link1=https://www.333333.com/"width="100%" height="445" frameborder="0" scrolling="no" allowfullscreen="">
+</iframe>
+
+
+111111 คือ id ของหนังเราครับ ได้จาก allplayer ครับ
+222222 คือ URL ของโฆษณษ เราครับ ต้องเป็น .mp4 ครับ
+                  เช่น >> https://www.222222.com/ads.mp4 <<
+333333 คือ URL ของลิ้งที่ให้คลิกไปเว็บโฆษณานั้นครับ
+                  เช่น >> https://www.333333.com/ <<
+
+
+การกำหนดเวลา
+s1=6 ความหมายคือ  
+	- s1 คือคลิป 1 เ
+	- 6 คือเวลานับถอยหลังคือ  6 วินาที
+
+
+----------------------------------------------------------------------------------------------------------
+แบบ 2 โฆษณา
+
+<iframe src="https://allplayer.tk/vst2.php?player=111111&s1=10&video1=https://mafiamovie.net/vdo/ads2.mp4
+&link1=https://ufa797z.com/&s2=10&video2=https://mafiamovie.net/vdo/ads1.mp4&link2=https://www.mafiamovie.net/" 
+width="100%" height="100%" frameborder="0" scrolling="no" allowfullscreen>
+</iframe>

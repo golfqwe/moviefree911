@@ -1,0 +1,8 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+Disallow: /admin_s3/
+
+User-agent: *
+Allow: /
+
+Sitemap: http://www.doonung-hd289.com/sitemap.php

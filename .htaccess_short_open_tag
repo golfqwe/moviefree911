@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^tag-([0-9]*)/(.*)$ all-tag.php?tag=$1
+RewriteRule ^cate-([0-9]*)/(.*)$ all-category.php?cate_id=$1&cate=$2
+RewriteRule ^post-([0-9]*)/(.*).html$ post-detail.php?topic_id=$1&topic=$2
+RewriteRule ^series-([0-9]*)/(.*)$ post_series.php?series=$1
+RewriteRule ^year-([0-9]*)$ all-year.php?year=$1
+
+</IfModule>
+php_flag short_open_tag On
