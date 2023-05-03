@@ -178,7 +178,7 @@ while($rads2=mysqli_fetch_row($reads2)){
                                           <td align="center" width="20%"><a href="//<?=$titler[3];?>/view-<?=$objResult[0];?>/<?=$posturl;?>.html" title="<?=$objResult[1];?>">
 
                                             <? if($objResult[2]!=""){ ?>
-                                            <img src="//<?=$titler[3];?>/post-img/<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="350" border="0" title="<?=$objResult[1];?>"style="border-radius: 4px;" />
+                                            <img src="data:image/<?php echo end(explode('-', $objResult[2])); ?>;base64,<?php echo curl($objResult[2]);?>" alt="<?=$objResult[1];?>" width="350" border="0" title="<?=$objResult[1];?>"style="border-radius: 4px;" />
                                             <? }else{ ?>
                                             <img src="//<?=$titler[3];?>/post-img/no-img.jpg" alt="<?=$objResult[1];?>"height="250" border="0" title="<?=$objResult[1];?>" />
                                             <? } ?>

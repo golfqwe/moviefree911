@@ -169,7 +169,7 @@ while($rads2=mysqli_fetch_row($reads2)){
 <span class="label warning" style="border-radius: 4px;margin:2px;font-size: 23px; background-color: #<? echo $theme_bgcolor;?>"><?=$objResult[1];?></span><p>
                                             <a href="//<?=$titler[3];?>/view-<?=$objResult[0];?>/<?=$posturl;?>.html" title="<?=$objResult[1];?>">
                                             <? if($objResult[2]!=""){ ?>
-                                            <img src="//<?=$titler[3];?>/post-img/<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="100%" border="0" title="<?=$objResult[1];?>" />
+                                            <img src="data:image/<?php echo end(explode('-', $objResult[2])); ?>;base64,<?php echo curl($objResult[2]);?>" alt="<?=$objResult[1];?>" width="100%" border="0" title="<?=$objResult[1];?>" />
                                             <? }else{ ?>
                                             <img src="//<?=$titler[3];?>/post-img/no-img.jpg" alt="<?=$objResult[1];?>"height="250" border="0" title="<?=$objResult[1];?>" />
                                             <? } ?>

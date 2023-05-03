@@ -233,7 +233,7 @@ $strSQL="SELECT id, title, img, view, movie, projection, imdb FROM `post` ";
                     $rpre_img = mysqli_fetch_assoc($repre_img);
                       if($rpre_img['post_id']!=$objResult[0]){
                   ?>
-                    <img src="<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
+                    <img src="data:image/<?php echo end(explode('-', $objResult[2])); ?>;base64,<?php echo curl($objResult[2]);?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
                   <? }else{ ?>
                     <img src="//<?=$titler[3];?>/post-img/<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
                   <? } ?>
@@ -482,7 +482,7 @@ $qr=mysqli_query($con_db, $q);
                     $rpre_img = mysqli_fetch_assoc($repre_img);
                       if($rpre_img['post_id']!=$objResult[0]){
                   ?>
-                    <img src="<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
+                    <img src="data:image/<?php echo end(explode('-', $objResult[2])); ?>;base64,<?php echo curl($objResult[2]);?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
                   <? }else{ ?>
                     <img src="//<?=$titler[3];?>/post-img/<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
                   <? } ?>                      

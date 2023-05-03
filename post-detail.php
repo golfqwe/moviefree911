@@ -339,7 +339,7 @@ while($rads2=mysqli_fetch_row($reads2)){
                     $rpre_img = mysqli_fetch_assoc($repre_img);
                         if($rpre_img['post_id']!=$_GET['topic_id']){
                   ?>
-                    <img src="<?=$rpost[6];?>" alt="<?=$rpost[3];?>" width="220" height="350" border="0" title="<?=$rpost[3];?>" />
+                    <img src="data:image/<?php echo end(explode('-', $rpost[6])); ?>;base64,<?php echo curl($rpost[6]);?>"src="<?=$rpost[6];?>" alt="<?=$rpost[3];?>" width="220" height="350" border="0" title="<?=$rpost[3];?>" />
                   <? }else{ ?>
                     <img src="//<?=$titler[3];?>/post-img/<?=$rpost[6];?>" alt="<?=$rpost[3];?>" width="220" height="350" border="0" title="<?=$rpost[3];?>" />
                   <? } ?>
@@ -2204,7 +2204,7 @@ $strSQL="SELECT id, title, img, view, movie, projection, imdb  FROM `post` WHERE
                     $rpre_img = mysqli_fetch_assoc($repre_img);
                         if($rpre_img['post_id']!=$objResult[0]){
                   ?>
-                    <img src="<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
+                    <img src="data:image/<?php echo end(explode('-', $objResult[2])); ?>;base64,<?php echo curl($objResult[2]);?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
                   <? }else{ ?>
                     <img src="//<?=$titler[3];?>/post-img/<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
                   <? } ?>
