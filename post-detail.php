@@ -1,5 +1,7 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml">
 <?php
-ob_start();
+session_start();	
 include "inc/config.inc.php";
 include "function/datethai.php";
 include "function/datetime.php";
@@ -63,8 +65,7 @@ $member_cats=mysqli_fetch_assoc($re_member);
     $member_exp=date('Y-m-d', strtotime("+1 day"));
   }
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="//www.w3.org/1999/xhtml">
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><? if($rpost[20]==""){ ?> <?=$rpost[3];?> <? }else{ ?> <?=$rpost[20];?> <?}?></title>
@@ -2203,7 +2204,7 @@ $strSQL="SELECT id, title, img, view, movie, projection, imdb  FROM `post` WHERE
                     $rpre_img = mysqli_fetch_assoc($repre_img);
                         if($rpre_img['post_id']!=$objResult[0]){
                   ?>
-                    <img src="data:image/<?php echo end(explode('-', $objResult[2])); ?>;base64,<?php echo curl($objResult[2]);?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
+                    <img src="<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
                   <? }else{ ?>
                     <img src="//<?=$titler[3];?>/post-img/<?=$objResult[2];?>" alt="<?=$objResult[1];?>" width="163" height="250" border="0" title="<?=$objResult[1];?>" />
                   <? } ?>

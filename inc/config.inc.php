@@ -1,12 +1,10 @@
 <?php
-
-$con_db= mysqli_connect("mysql","movief13_movie911","0618678291_Sky","movief13_movie911") or die("Error: config " . mysqli_error($con_db));
+$con_db= mysqli_connect("localhost","zeedplay_thaimovie3g","MqzK4}#aUqFt","zeedplay_thaimovie3g") or die("Error: config " . mysqli_error($con_db));
 
 mysqli_query($con_db, "SET NAMES utf8");
 mysqli_query($con_db, "SET character_set_results=utf8");
 mysqli_query($con_db, "SET character_set_client=utf8");
 mysqli_query($con_db, "SET character_set_connection=utf8");
-mysqli_set_charset($con_db, "utf8");
 date_default_timezone_set("Asia/Bangkok");
 $title="select * from web_detail where id=1";
 $titlere=mysqli_query($con_db, $title) or die("ERROR $title");
